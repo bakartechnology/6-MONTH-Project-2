@@ -9,18 +9,6 @@
     <script src="https://kit.fontawesome.com/7c2bed3620.js" crossorigin="anonymous"></script>
 </head>
 <style>
-    @keyframes float {
-
-        0%,
-        100% {
-            transform: translateY(0px);
-        }
-
-        50% {
-            transform: translateY(-8px);
-        }
-    }
-
     @keyframes glow {
 
         0%,
@@ -33,12 +21,23 @@
         }
     }
 
-    .floating {
-        animation: float 3s ease-in-out infinite;
-    }
 
     .glow {
         animation: glow 3s infinite;
+    }
+
+    .group {
+        box-shadow:
+            0 0 0 1px rgba(16, 185, 129, .15),
+            0 0 18px rgba(16, 185, 129, .18),
+            inset 0 0 25px rgba(16, 185, 129, .08);
+    }
+
+    .group:hover {
+        box-shadow:
+            0 0 0 1px rgba(16, 185, 129, .35),
+            0 0 35px rgba(16, 185, 129, .35),
+            inset 0 0 30px rgba(16, 185, 129, .12);
     }
 </style>
 
@@ -48,10 +47,8 @@
     <!-- Navbar -->
     <nav class="sticky top-0 z-50 backdrop-blur-xl bg-white/10 border-b border-white/10 shadow-2xl">
 
-        <div class="max-w-7xl mx-auto px-6">
-
+        <div class="max-w-7xl mx-auto px-2">
             <div class="flex justify-between items-center h-20">
-
                 <!--Nav-Logo -->
                 <a href="#"
                     class="text-3xl font-extrabold bg-linear-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent hover:scale-105 active:scale-95 transition duration-300">
@@ -105,7 +102,8 @@
 
                 </div>
                 <!-- Nav-Menu-Button-->
-                <label for="menu-toggle" class="lg:hidden cursor-pointer text-3xl hover:text-emerald-400 active:text-emerald-400 active:scale-90 transition">
+                <label for="menu-toggle"
+                    class="lg:hidden cursor-pointer text-3xl hover:text-emerald-400 active:text-emerald-400 active:scale-90 transition">
                     <i class="fa-solid fa-bars"></i>
                 </label>
 
@@ -126,11 +124,13 @@
 
             <div class="flex justify-between items-center">
 
-                <h2 class="text-2xl font-extrabold bg-linear-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent hover:scale-105 active:scale-95 transition duration-300">
+                <h2
+                    class="text-2xl font-extrabold bg-linear-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent hover:scale-105 active:scale-95 transition duration-300">
                     LearnHub
                 </h2>
 
-                <label for="menu-toggle" class="cursor-pointer text-3xl p-2 rounded-lg hover:bg-emerald-500/10 hover:text-emerald-400 active:bg-emerald-500/20 active:text-emerald-400 active:scale-90 transition-all duration-300">
+                <label for="menu-toggle"
+                    class="cursor-pointer text-3xl p-2 rounded-lg hover:bg-emerald-500/10 hover:text-emerald-400 active:bg-emerald-500/20 active:text-emerald-400 active:scale-90 transition-all duration-300">
                     <i class="fa-solid fa-xmark"></i>
                 </label>
 
@@ -140,31 +140,36 @@
 
                 <a href="#"
                     class="group flex items-center gap-3 p-4 rounded-xl border border-transparent hover:border-emerald-500/30 hover:bg-emerald-500/10 hover:text-emerald-400 hover:translate-x-2  active:border-emerald-500/30 active:bg-emerald-500/10 active:text-emerald-400 active:translate-x-2 focus:border-emerald-500/30 focus:bg-emerald-500/10 focus:text-emerald-400 transition-all duration-300">
-                    <i class="fa-solid fa-house text-emerald-400 group-hover:scale-110 group-active:scale-110 transition duration-300"></i>
+                    <i
+                        class="fa-solid fa-house text-emerald-400 group-hover:scale-110 group-active:scale-110 transition duration-300"></i>
                     Home
                 </a>
 
                 <a href="#"
                     class="group flex items-center gap-3 p-4 rounded-xl border border-transparent hover:border-emerald-500/30 hover:bg-emerald-500/10 hover:text-emerald-400 hover:translate-x-2  active:border-emerald-500/30 active:bg-emerald-500/10 active:text-emerald-400 active:translate-x-2 focus:border-emerald-500/30 focus:bg-emerald-500/10 focus:text-emerald-400 transition-all duration-300">
-                    <i class="fa-solid fa-table-columns text-emerald-400 group-hover:scale-110 group-active:scale-110 transition duration-300"></i>
+                    <i
+                        class="fa-solid fa-table-columns text-emerald-400 group-hover:scale-110 group-active:scale-110 transition duration-300"></i>
                     Dashboard
                 </a>
 
                 <a href="#"
                     class="group flex items-center gap-3 p-4 rounded-xl border border-transparent hover:border-emerald-500/30 hover:bg-emerald-500/10 hover:text-emerald-400 hover:translate-x-2  active:border-emerald-500/30 active:bg-emerald-500/10 active:text-emerald-400 active:translate-x-2 focus:border-emerald-500/30 focus:bg-emerald-500/10 focus:text-emerald-400 transition-all duration-300">
-                    <i class="fa-solid fa-graduation-cap text-emerald-400 group-hover:scale-110 group-active:scale-110 transition duration-300"></i>
+                    <i
+                        class="fa-solid fa-graduation-cap text-emerald-400 group-hover:scale-110 group-active:scale-110 transition duration-300"></i>
                     Courses
                 </a>
 
                 <a href="#"
                     class="group flex items-center gap-3 p-4 rounded-xl border border-transparent hover:border-emerald-500/30 hover:bg-emerald-500/10 hover:text-emerald-400 hover:translate-x-2  active:border-emerald-500/30 active:bg-emerald-500/10 active:text-emerald-400 active:translate-x-2 focus:border-emerald-500/30 focus:bg-emerald-500/10 focus:text-emerald-400 transition-all duration-300">
-                    <i class="fa-solid fa-tags text-emerald-400 group-hover:scale-110 group-active:scale-110 transition duration-300"></i>
+                    <i
+                        class="fa-solid fa-tags text-emerald-400 group-hover:scale-110 group-active:scale-110 transition duration-300"></i>
                     Pricing
                 </a>
 
                 <a href="#"
                     class="group flex items-center gap-3 p-4 rounded-xl border border-transparent hover:border-emerald-500/30 hover:bg-emerald-500/10 hover:text-emerald-400 hover:translate-x-2  active:border-emerald-500/30 active:bg-emerald-500/10 active:text-emerald-400 active:translate-x-2 focus:border-emerald-500/30 focus:bg-emerald-500/10 focus:text-emerald-400 transition-all duration-300">
-                    <i class="fa-solid fa-envelope text-emerald-400 group-hover:scale-110 group-active:scale-110 transition duration-300"></i>
+                    <i
+                        class="fa-solid fa-envelope text-emerald-400 group-hover:scale-110 group-active:scale-110 transition duration-300"></i>
                     Contact
                 </a>
 
@@ -191,8 +196,7 @@
     </aside>
 
     <!-- Hero Section -->
-    <section
-        class="min-h-screen flex items-center justify-center px-6 bg-linear-to-br from-black to-emerald-950">
+    <section class="min-h-screen flex items-center justify-center px-6 bg-linear-to-br from-black to-emerald-950">
 
         <div class="text-center max-w-5xl mx-auto">
 
@@ -230,10 +234,200 @@
 
     <!-- Floating Action Button -->
     <a href="#"
-        class="fixed bottom-6 right-6 w-16 h-16 rounded-full bg-emerald-500 flex items-center justify-center text-2xl shadow-2xl glow floating hover:scale-110 active:scale-95 transition duration-300 z-50">
+        class="fixed bottom-6 right-6 w-16 h-16 rounded-full bg-emerald-500 flex items-center justify-center text-2xl shadow-2xl glow hover:scale-110 active:scale-95 transition duration-300 z-50">
         <i class="fa-solid fa-arrow-up"></i>
     </a>
 
+    <!-- Trusted Companies Section -->
+    <section class="relative py-28 overflow-hidden bg-black">
+
+        <!-- Background Glow -->
+        <div class="absolute -left-40 bottom-0 w-155 h-155 bg-emerald-500/20 blur-[140px] rounded-full"></div>
+
+        <div class="absolute -right-40 bottom-0 w-155 h-155 bg-emerald-400/15 blur-[170px] rounded-full"></div>
+
+        <div class="absolute left-1/2 -translate-x-1/2 bottom-0 w-125 h-63 bg-emerald-500/20 blur-[180px] rounded-full">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+            <!-- Badge -->
+            <div class="flex justify-center">
+
+                <div
+                    class="group relative inline-flex items-center gap-5 px-10 py-4 rounded-full border border-emerald-400/40 bg-linear-to-r from-[#06281E] via-[#093328] to-[#06281E] shadow-[0_0_30px_rgba(16,185,129,.25)] hover:shadow-[0_0_45px_rgba(16,185,129,.45)] hover:scale-105 transition-all duration-500 overflow-hidden">
+
+                    <!--Glow -->
+                    <div class="absolute inset-0 rounded-full bg-emerald-500/5 blur-xl opacity-80">
+                    </div>
+
+                    <!-- Icon -->
+                    <div
+                        class="relative w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-[0_0_18px_rgba(16,185,129,.35)]">
+
+                        <i class="fa-solid fa-shield-halved text-emerald-500 text-xl"></i>
+
+                    </div>
+
+                    <!-- Text -->
+                    <div class="relative text-[15px] font-semibold tracking-wide">
+
+                        <span class="text-white">
+                            Trusted by
+                        </span>
+
+                        <span class="text-emerald-400 font-bold">
+                            10,000+
+                        </span>
+
+                        <span class="text-emerald-400 font-semibold">
+                            Companies
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <!-- Heading -->
+
+            <div class="text-center mt-12">
+
+                <h2 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
+
+                    Trusted by Innovative
+
+                    <br>
+
+                    <span
+                        class="bg-linear-to-r from-emerald-300 via-emerald-400 to-emerald-500 bg-clip-text text-transparent">
+
+                        Companies
+
+                    </span>
+
+                    <span class="text-white">
+                        Worldwide
+                    </span>
+
+                </h2>
+
+                <p class="mt-8 text-white/60 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+
+                    Join thousands of organizations that trust our platform to
+                    deliver premium learning experiences with interactive courses
+                    and modern dashboards.
+
+                </p>
+
+            </div>
+
+            <!-- Logo Cards -->
+
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 md:gap-5 mt-20">
+
+                <!-- Card -->
+
+                <div
+                    class="group relative rounded-3xl border border-emerald-500/25  backdrop-blur-xl h-44 md:h-44 flex items-center justify-center overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:border-emerald-400 hover:shadow-[0_0_45px_rgba(16,185,129,.35)]">
+
+                    <div
+                        class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-linear-to-br from-emerald-500/20 via-transparent to-emerald-300/10">
+                    </div>
+
+                    <div
+                        class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-emerald-400/20 blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700">
+                    </div>
+
+                    <img src="./images/google.png"
+                        class="relative h-24 md:h-24 lg:h-28 w-auto object-contain transition-all duration-500 group-hover:scale-110">
+
+                </div>
+
+                <div
+                    class="group relative rounded-3xl border border-emerald-500/25 backdrop-blur-xl h-44 md:h-44 flex items-center justify-center overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:border-emerald-400 hover:shadow-[0_0_45px_rgba(16,185,129,.35)]">
+                    <div
+                        class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-linear-to-br from-emerald-500/20 via-transparent to-emerald-300/10">
+                    </div>
+
+                    <div
+                        class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-emerald-400/20 blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700">
+                    </div>
+
+                    <img src="./images/microsoft.png"
+                        class="relative h-24 md:h-24 lg:h-28 w-auto object-contain transition-all duration-500 group-hover:scale-110">
+
+                </div>
+
+                <div
+                    class="group relative rounded-3xl border border-emerald-500/25  backdrop-blur-xl h-44 md:h-44 flex items-center justify-center overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:border-emerald-400 hover:shadow-[0_0_45px_rgba(16,185,129,.35)]">
+                    <div
+                        class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-linear-to-br from-emerald-500/20 via-transparent to-emerald-300/10">
+                    </div>
+
+                    <div
+                        class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-emerald-400/20 blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700">
+                    </div>
+
+                    <img src="./images/slack.png"
+                        class="relative h-24 md:h-24 lg:h-28 w-auto object-contain transition-all duration-500 group-hover:scale-110">
+
+                </div>
+
+                <div
+                    class="group relative rounded-3xl border border-emerald-500/25  backdrop-blur-xl h-44 md:h-44 flex items-center justify-center overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:border-emerald-400 hover:shadow-[0_0_45px_rgba(16,185,129,.35)]">
+
+                    <div
+                        class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-linear-to-br from-emerald-500/20 via-transparent to-emerald-300/10">
+                    </div>
+
+                    <div
+                        class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-emerald-400/20 blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700">
+                    </div>
+
+                    <img src="./images/airbnb.png"
+                        class="relative h-24 md:h-24 lg:h-28 w-auto object-contain transition-all duration-500 group-hover:scale-110 ">
+
+                </div>
+
+                <div
+                    class="group relative rounded-3xl border border-emerald-500/25 backdrop-blur-xl h-44 md:h-44 flex items-center justify-center overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:border-emerald-400 hover:shadow-[0_0_45px_rgba(16,185,129,.35)]">
+
+                    <div
+                        class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-linear-to-br from-emerald-500/20 via-transparent to-emerald-300/10">
+                    </div>
+
+                    <div
+                        class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-emerald-400/20 blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700">
+                    </div>
+
+                    <img src="./images/amazon.png"
+                        class="relative h-24 md:h-24 lg:h-28 w-auto object-contain transition-all duration-500 group-hover:scale-110">
+
+                </div>
+
+                <div
+                    class="group relative rounded-3xl border border-emerald-500/25 backdrop-blur-xl h-44 md:h-44 flex items-center justify-center overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:border-emerald-400 hover:shadow-[0_0_45px_rgba(16,185,129,.35)]">
+
+                    <div
+                        class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-linear-to-br from-emerald-500/20 via-transparent to-emerald-300/10">
+                    </div>
+
+                    <div
+                        class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-emerald-400/20 blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700">
+                    </div>
+
+                    <img src="./images/hubspot.png"
+                        class="relative h-24 md:h-24 lg:h-28 w-auto object-contain transition-all duration-500 group-hover:scale-110">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 </body>
 
 </html>
