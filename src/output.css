@@ -201,6 +201,9 @@
   }
 }
 @layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
   .invisible {
     visibility: hidden;
   }
@@ -251,6 +254,9 @@
   }
   .left-1\/2 {
     left: calc(1 / 2 * 100%);
+  }
+  .-z-10 {
+    z-index: calc(10 * -1);
   }
   .z-10 {
     z-index: 10;
@@ -887,6 +893,10 @@
   .will-change-transform {
     will-change: transform;
   }
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
+  }
   .group-hover\:scale-110 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1049,6 +1059,13 @@
       }
     }
   }
+  .hover\:will-change-transform {
+    &:hover {
+      @media (hover: hover) {
+        will-change: transform;
+      }
+    }
+  }
   .focus\:border-emerald-500\/30 {
     &:focus {
       border-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 30%, transparent);
@@ -1082,6 +1099,27 @@
       --tw-scale-y: 105%;
       --tw-scale-z: 105%;
       scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+  .focus-visible\:border-emerald-500\/30 {
+    &:focus-visible {
+      border-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 30%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        border-color: color-mix(in oklab, var(--color-emerald-500) 30%, transparent);
+      }
+    }
+  }
+  .focus-visible\:bg-emerald-500\/10 {
+    &:focus-visible {
+      background-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 10%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-emerald-500) 10%, transparent);
+      }
+    }
+  }
+  .focus-visible\:text-emerald-400 {
+    &:focus-visible {
+      color: var(--color-emerald-400);
     }
   }
   .active\:translate-x-2 {
