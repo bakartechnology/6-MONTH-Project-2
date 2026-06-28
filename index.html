@@ -55,7 +55,50 @@
    COURSE CARD ANIMATIONS
 ========================== */
 
-    @keyframes floatCard {
+    .course-card {
+        animation:
+            floatCard 8s ease-in-out infinite,
+            glowPulse 6s ease-in-out infinite;
+
+        transition:
+            transform .8s cubic-bezier(.22, .61, .36, 1),
+            box-shadow .8s cubic-bezier(.22, .61, .36, 1);
+
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+
+    /* Different timings for smoother motion */
+    .course-card:nth-child(2) {
+        animation-delay: .3s;
+    }
+
+    .course-card:nth-child(3) {
+        animation-delay: .6s;
+    }
+
+    .course-card:nth-child(4) {
+        animation-delay: .9s;
+    }
+
+    .course-card:nth-child(5) {
+        animation-delay: 1.2s;
+    }
+
+    .course-card:nth-child(6) {
+        animation-delay: 1.5s;
+    }
+
+    .course-card:nth-child(7) {
+        animation-delay: 1.8s;
+    }
+
+    .course-card:nth-child(8) {
+        animation-delay: 2.1s;
+    }
+
+    /* @keyframes floatCard {
 
         0%,
         100% {
@@ -65,9 +108,37 @@
         50% {
             transform: translateY(-8px);
         }
+    } */
+
+    @keyframes floatCard {
+
+        0%,
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        50% {
+            transform: translate3d(0, -6px, 0);
+        }
     }
 
     @keyframes glowPulse {
+
+        0%,
+        100% {
+            box-shadow:
+                0 0 0 1px rgba(16, 185, 129, .15),
+                0 0 18px rgba(16, 185, 129, .15);
+        }
+
+        50% {
+            box-shadow:
+                0 0 0 1px rgba(16, 185, 129, .25),
+                0 0 28px rgba(16, 185, 129, .22);
+        }
+    }
+
+    /* @keyframes glowPulse {
 
         0%,
         100% {
@@ -81,7 +152,7 @@
                 0 0 0 1px rgba(16, 185, 129, .35),
                 0 0 45px rgba(16, 185, 129, .35);
         }
-    }
+    } */
 
     /* Base Animation For All Devices */
     .course-card {
@@ -96,8 +167,19 @@
         will-change: transform;
     }
 
+    @media (hover:hover) {
+
+        .course-card:hover {
+            transform: translateY(-10px) scale(1.02);
+
+            box-shadow:
+                0 0 0 1px rgba(16, 185, 129, .30),
+                0 0 35px rgba(16, 185, 129, .28);
+        }
+    }
+
     /* Desktop Hover */
-    @media (hover: hover) {
+    /* @media (hover: hover) {
         .course-card:hover {
             transform: translateY(-14px) scale(1.03);
 
@@ -105,7 +187,7 @@
                 0 0 0 1px rgba(16, 185, 129, .35),
                 0 0 60px rgba(16, 185, 129, .35);
         }
-    }
+    } */
 
     /* Mobile & Tablet Tap Effect */
     @media (hover: none) {
